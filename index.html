@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chocolate Cake Recipe Card</title>
+  <link rel="stylesheet" href="styles.css" />
+  <!-- Google Fonts for a professional look -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;400&display=swap" rel="stylesheet">
+  <!-- Font Awesome for icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="bg-image"></div>
+  <div class="recipe-card">
+    <header>
+      <h1>
+        <i class="fa-solid fa-cake-candles"></i>
+        Chocolate Cake
+      </h1>
+      <div class="meta">
+        <span><i class="fa-regular fa-clock"></i> Prep: 20 min</span>
+        <span><i class="fa-solid fa-fire-burner"></i> Cook: 30 min</span>
+        <span><i class="fa-solid fa-users"></i> Serves: 8</span>
+      </div>
+     
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c?auto=format&fit=crop&w=800&h=533&q=80" alt="chocolate cake" class="recipe-image" />
+    </header>
+    <section class="actions">
+      <button id="toggle-ingredients" class="action-btn"><i class="fa-solid fa-basket-shopping"></i> Show Ingredients</button>
+      <button id="toggle-steps" class="action-btn"><i class="fa-solid fa-list-ol"></i> Show Steps</button>
+    </section>
+    <section id="ingredients-section" class="collapsible">
+      <h2><i class="fa-solid fa-basket-shopping"></i> Ingredients</h2>
+      <ul class="ingredients-list">
+        <li>1 ½ cups all-purpose flour</li>
+        <li>1 cup sugar</li>
+        <li>¼ cup cocoa powder</li>
+        <li>1 tsp baking soda</li>
+        <li>½ tsp salt</li>
+        <li>1 cup water</li>
+        <li>⅓ cup vegetable oil</li>
+        <li>1 tbsp vinegar</li>
+        <li>1 tsp vanilla extract</li>
+        <li>½ cup chocolate chips (optional)</li>
+      </ul>
+    </section>
+    <section id="steps-section" class="collapsible">
+      <h2><i class="fa-solid fa-list-ol"></i> Steps</h2>
+      <ol class="steps-list">
+        <li>Preheat oven to 350°F (175°C). Grease a round cake pan.</li>
+        <li>In a bowl, whisk flour, sugar, cocoa, baking soda, and salt.</li>
+        <li>Add water, oil, vinegar, and vanilla. Mix until just combined.</li>
+        <li>Fold in chocolate chips if using.</li>
+        <li>Pour batter into pan and bake for 30 minutes.</li>
+        <li>Let cool before serving. Enjoy!</li>
+      </ol>
+      <div class="progress-bar-container">
+        <div id="progress-bar" class="progress-bar"></div>
+      </div>
+      <div class="cooking-controls">
+        <button id="start-cooking" class="cooking-btn"><i class="fa-solid fa-play"></i> Start Cooking</button>
+        <button id="next-step" class="cooking-btn" disabled><i class="fa-solid fa-arrow-right"></i> Next</button>
+        <span id="timer" class="timer"></span>
+      </div>
+    </section>
+    <footer>
+      <button class="print-btn" onclick="window.print()"><i class="fa-solid fa-print"></i> Print Recipe</button>
+    </footer>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
